@@ -1,6 +1,6 @@
 from webscraper import Webscraper
 
-URL = "https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js"
+SNA_URL_API = "https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js"
 HEADERS = {
     "User-Agent": "Mozilla/5.0",
     "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -9,7 +9,7 @@ HEADERS = {
 }
 
 def main():
-    scraper = Webscraper(URL, HEADERS)
+    scraper = Webscraper(SNA_URL_API, HEADERS)
     scraper.run()
 
 if __name__ == "__main__":

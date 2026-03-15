@@ -52,6 +52,7 @@ class Webscraper:
                 code = "NAN"
             arrival_rows.append({
                 "id": flight.get("id"),
+                "flight_type": "arrival",
                 "city": city,
                 "status": flight.get("status"),
                 "gate": flight.get("gate"),
@@ -59,7 +60,7 @@ class Webscraper:
                 "scheduled_time": flight.get("times", {}).get("scheduled"),
                 "actual_time": flight.get("times", {}).get("actual"),
                 "flight_codes": ", ".join(flight.get("codes", [])),
-                "arrival_airport_code": ", ".join(flight.get("route", [])),
+                "route_airport_code": ", ".join(flight.get("route", [])),
             })
 
         for flight in departures:
@@ -73,6 +74,7 @@ class Webscraper:
                 code = "NAN"
             departures_rows.append({
                 "id": flight.get("id"),
+                "flight_type": "departure",
                 "city": city,
                 "status": flight.get("status"),
                 "gate": flight.get("gate"),
@@ -80,7 +82,7 @@ class Webscraper:
                 "scheduled_time": flight.get("times", {}).get("scheduled"),
                 "actual_time": flight.get("times", {}).get("actual"),
                 "flight_codes": ", ".join(flight.get("codes", [])),
-                "arrival_airport_code": ", ".join(flight.get("route", [])),
+                "route_airport_code": ", ".join(flight.get("route", [])),
             })
         
         df = pd.DataFrame(arrival_rows + departures_rows)
