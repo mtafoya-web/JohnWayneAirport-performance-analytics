@@ -2,7 +2,9 @@ from webscraper import Webscraper
 from clean_data import Cleandata
 from datetime import datetime
 import logging 
-import os
+from apscheduler.schedulers.blocking import BlockingScheduler
+from pathlib import Path
+
 
 # Configure logging
 logging.basicConfig(
@@ -23,15 +25,37 @@ HEADERS = {
     "Origin": "https://www.ocair.com",
 }
 
-today = datetime.today().strftime("%Y-%m-%d")
-path = "./data/"
-filename = f"JohnWayneFlights_{today}.csv"
+DATA_DIR = Path("./data")
+
 
 def run_pipeline():
-    scraper = Webscraper(SNA_URL_API, HEADERS)
-    scraper.run()
-    cleaner = Cleandata(path + filename)
-    cleaner.run()
+    try:
+        DATA_DIR.mkdir(parents=True, exist_ok=True)
+
+        today = datetime.today().strftime("%Y-%m-%d")
+        filename = f"JohnWayneFlights_{today}.csv"
+        file_path = DATA_DIR / filename
+
+        logging.info("Starting pipeline")
+
+        scraper = Webscraper(SNA_URL_API, HEADERS)
+        scraper.run()
+
+        cleaner = Cleandata(str(file_path))
+        cleaner.run()
+
+        logging.info("Pipeline completed successfully")
+
+    except Exception as e:
+        logging.exception(f"Pipeline failed: {e}")
+
 
 if __name__ == "__main__":
-    run_pipeline()
+    scheduler = BlockingScheduler()
+    scheduler.add_job(run_pipeline, "cron", hour=23, minute=59)
+
+    try:
+        logging.info("Scheduler started")
+        scheduler.start()
+    except (KeyboardInterrupt, SystemExit):
+        logging.info("Scheduler stopped")

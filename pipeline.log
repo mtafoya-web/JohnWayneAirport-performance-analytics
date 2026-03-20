@@ -200,3 +200,722 @@ Top 10 delayed flights:
 2026-03-20 14:26:03,458 [INFO] Step 5: Exporting cleaned data
 2026-03-20 14:26:03,466 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
 2026-03-20 14:26:03,466 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:00:15,972 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:00:15,973 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:00:15,973 [INFO] Scheduler started
+2026-03-20 15:01:22,906 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:01:22,907 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:01:22,907 [INFO] Scheduler started
+2026-03-20 15:02:46,325 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:02:46,326 [INFO] Initializing Webscraper
+2026-03-20 15:02:46,326 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:02:46,326 [INFO] Starting scraper pipeline
+2026-03-20 15:02:46,327 [INFO] Sending GET request to flight data source
+2026-03-20 15:02:47,054 [INFO] Request successful with status code 200
+2026-03-20 15:02:47,055 [INFO] Parsing response body as JSON
+2026-03-20 15:02:47,057 [INFO] JSON data loaded successfully
+2026-03-20 15:02:47,057 [INFO] Response status code: 200
+2026-03-20 15:02:47,058 [INFO] Response content type: application/json
+2026-03-20 15:02:47,058 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:02:47,059 [INFO] Top-level key: link
+2026-03-20 15:02:47,060 [INFO] Top-level key: datetime
+2026-03-20 15:02:47,060 [INFO] Top-level key: provider
+2026-03-20 15:02:47,061 [INFO] Top-level key: airlines
+2026-03-20 15:02:47,061 [INFO] Top-level key: airports
+2026-03-20 15:02:47,062 [INFO] Top-level key: flights
+2026-03-20 15:02:47,062 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:02:47,063 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:02:47,063 [INFO] Found 144 arrivals
+2026-03-20 15:02:47,064 [INFO] Found 117 departures
+2026-03-20 15:02:47,068 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:02:47,069 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:47,080 [INFO] CSV export completed successfully
+2026-03-20 15:02:47,081 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:02:47,081 [INFO] Loading raw CSV file: ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:47,096 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:02:47,097 [INFO] Starting full cleaning pipeline
+2026-03-20 15:02:47,097 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:02:47,097 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:02:47,098 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:02:47,099 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:02:47,099 [INFO] Checking missing values
+2026-03-20 15:02:47,101 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:02:47,101 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:02:47,105 [INFO] Calculating delay in minutes
+2026-03-20 15:02:47,108 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:02:47,109 [INFO] Missing IDs: 191
+2026-03-20 15:02:47,109 [INFO] Cleaning claim column
+2026-03-20 15:02:47,110 [INFO] Cleaning gate column
+2026-03-20 15:02:47,111 [INFO] Standardizing status column
+2026-03-20 15:02:47,112 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'On Time', 'Early', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:02:47,112 [INFO] Extracting primary flight code
+2026-03-20 15:02:47,114 [INFO] Extracting airline code and flight number
+2026-03-20 15:02:47,115 [INFO] Mapping airline codes to airline names
+2026-03-20 15:02:47,116 [INFO] Creating cleaned status column
+2026-03-20 15:02:47,120 [INFO] Creating time-based features
+2026-03-20 15:02:47,124 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:02:47,124 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:02:47,126 [INFO] KPI flags created
+2026-03-20 15:02:47,127 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:02:47,128 [INFO] Step 2 complete
+2026-03-20 15:02:47,128 [INFO] Step 3: Running data quality checks
+2026-03-20 15:02:47,128 [INFO] Rows: 261
+2026-03-20 15:02:47,129 [INFO] Missing IDs: 191
+2026-03-20 15:02:47,129 [INFO] Missing claims: 126
+2026-03-20 15:02:47,130 [INFO] Missing scheduled_time: 0
+2026-03-20 15:02:47,130 [INFO] Missing actual_time: 0
+2026-03-20 15:02:47,132 [INFO] Status distribution:
+status_clean
+On Time      192
+Early         43
+Delayed       25
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:02:47,133 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:02:47,134 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:02:47,134 [INFO] Step 3 complete
+2026-03-20 15:02:47,134 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:02:47,148 [INFO] 
+Top 10 delayed flights:
+    flight_type            city     airline      scheduled_time         actual_time  delay_min status_clean
+62      arrival  Seattle-Tacoma      Alaska 2026-03-20 14:03:00 2026-03-20 16:19:00      136.0      Delayed
+210   departure  Seattle-Tacoma      Alaska 2026-03-20 14:57:00 2026-03-20 17:07:00      130.0      Delayed
+148   departure         Atlanta       Delta 2026-03-20 06:45:00 2026-03-20 08:54:00      129.0      Delayed
+220   departure         Oakland   Southwest 2026-03-20 16:15:00 2026-03-20 17:58:00      103.0      Delayed
+73      arrival         Oakland   Southwest 2026-03-20 15:40:00 2026-03-20 17:23:00      103.0      Delayed
+188   departure       Vancouver  Air Canada 2026-03-20 12:25:00 2026-03-20 13:40:00       75.0      Delayed
+95      arrival  Seattle-Tacoma       Delta 2026-03-20 18:23:00 2026-03-20 19:33:00       70.0      Delayed
+158   departure       Charlotte    American 2026-03-20 07:45:00 2026-03-20 08:55:00       70.0      Delayed
+185   departure         Atlanta       Delta 2026-03-20 11:56:00 2026-03-20 13:05:00       69.0      Delayed
+37      arrival       Vancouver  Air Canada 2026-03-20 11:25:00 2026-03-20 12:31:00       66.0      Delayed
+2026-03-20 15:02:47,148 [INFO] Step 4 complete
+2026-03-20 15:02:47,148 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:02:47,159 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:47,159 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:02:58,541 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:02:58,542 [INFO] Initializing Webscraper
+2026-03-20 15:02:58,542 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:02:58,543 [INFO] Starting scraper pipeline
+2026-03-20 15:02:58,543 [INFO] Sending GET request to flight data source
+2026-03-20 15:02:59,294 [INFO] Request successful with status code 200
+2026-03-20 15:02:59,296 [INFO] Parsing response body as JSON
+2026-03-20 15:02:59,299 [INFO] JSON data loaded successfully
+2026-03-20 15:02:59,300 [INFO] Response status code: 200
+2026-03-20 15:02:59,302 [INFO] Response content type: application/json
+2026-03-20 15:02:59,303 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:02:59,304 [INFO] Top-level key: link
+2026-03-20 15:02:59,306 [INFO] Top-level key: datetime
+2026-03-20 15:02:59,307 [INFO] Top-level key: provider
+2026-03-20 15:02:59,308 [INFO] Top-level key: airlines
+2026-03-20 15:02:59,309 [INFO] Top-level key: airports
+2026-03-20 15:02:59,310 [INFO] Top-level key: flights
+2026-03-20 15:02:59,311 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:02:59,312 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:02:59,313 [INFO] Found 144 arrivals
+2026-03-20 15:02:59,313 [INFO] Found 117 departures
+2026-03-20 15:02:59,317 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:02:59,318 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:59,329 [INFO] CSV export completed successfully
+2026-03-20 15:02:59,329 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:02:59,330 [INFO] Loading raw CSV file: ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:59,344 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:02:59,345 [INFO] Starting full cleaning pipeline
+2026-03-20 15:02:59,345 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:02:59,346 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:02:59,346 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:02:59,346 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:02:59,347 [INFO] Checking missing values
+2026-03-20 15:02:59,348 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:02:59,348 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:02:59,351 [INFO] Calculating delay in minutes
+2026-03-20 15:02:59,354 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:02:59,355 [INFO] Missing IDs: 191
+2026-03-20 15:02:59,356 [INFO] Cleaning claim column
+2026-03-20 15:02:59,356 [INFO] Cleaning gate column
+2026-03-20 15:02:59,357 [INFO] Standardizing status column
+2026-03-20 15:02:59,359 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'On Time', 'Early', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:02:59,359 [INFO] Extracting primary flight code
+2026-03-20 15:02:59,361 [INFO] Extracting airline code and flight number
+2026-03-20 15:02:59,363 [INFO] Mapping airline codes to airline names
+2026-03-20 15:02:59,365 [INFO] Creating cleaned status column
+2026-03-20 15:02:59,368 [INFO] Creating time-based features
+2026-03-20 15:02:59,372 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:02:59,373 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:02:59,374 [INFO] KPI flags created
+2026-03-20 15:02:59,375 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:02:59,376 [INFO] Step 2 complete
+2026-03-20 15:02:59,376 [INFO] Step 3: Running data quality checks
+2026-03-20 15:02:59,376 [INFO] Rows: 261
+2026-03-20 15:02:59,377 [INFO] Missing IDs: 191
+2026-03-20 15:02:59,377 [INFO] Missing claims: 126
+2026-03-20 15:02:59,378 [INFO] Missing scheduled_time: 0
+2026-03-20 15:02:59,378 [INFO] Missing actual_time: 0
+2026-03-20 15:02:59,379 [INFO] Status distribution:
+status_clean
+On Time      192
+Early         43
+Delayed       25
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:02:59,380 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:02:59,381 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:02:59,381 [INFO] Step 3 complete
+2026-03-20 15:02:59,382 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:02:59,394 [INFO] 
+Top 10 delayed flights:
+    flight_type            city     airline      scheduled_time         actual_time  delay_min status_clean
+62      arrival  Seattle-Tacoma      Alaska 2026-03-20 14:03:00 2026-03-20 16:19:00      136.0      Delayed
+210   departure  Seattle-Tacoma      Alaska 2026-03-20 14:57:00 2026-03-20 17:07:00      130.0      Delayed
+148   departure         Atlanta       Delta 2026-03-20 06:45:00 2026-03-20 08:54:00      129.0      Delayed
+220   departure         Oakland   Southwest 2026-03-20 16:15:00 2026-03-20 17:58:00      103.0      Delayed
+73      arrival         Oakland   Southwest 2026-03-20 15:40:00 2026-03-20 17:23:00      103.0      Delayed
+188   departure       Vancouver  Air Canada 2026-03-20 12:25:00 2026-03-20 13:40:00       75.0      Delayed
+95      arrival  Seattle-Tacoma       Delta 2026-03-20 18:23:00 2026-03-20 19:33:00       70.0      Delayed
+158   departure       Charlotte    American 2026-03-20 07:45:00 2026-03-20 08:55:00       70.0      Delayed
+185   departure         Atlanta       Delta 2026-03-20 11:56:00 2026-03-20 13:05:00       69.0      Delayed
+37      arrival       Vancouver  Air Canada 2026-03-20 11:25:00 2026-03-20 12:31:00       66.0      Delayed
+2026-03-20 15:02:59,394 [INFO] Step 4 complete
+2026-03-20 15:02:59,395 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:02:59,400 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:02:59,400 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:03:03,071 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:03:03,071 [INFO] Initializing Webscraper
+2026-03-20 15:03:03,072 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:03:03,072 [INFO] Starting scraper pipeline
+2026-03-20 15:03:03,072 [INFO] Sending GET request to flight data source
+2026-03-20 15:03:03,804 [INFO] Request successful with status code 200
+2026-03-20 15:03:03,804 [INFO] Parsing response body as JSON
+2026-03-20 15:03:03,805 [INFO] JSON data loaded successfully
+2026-03-20 15:03:03,805 [INFO] Response status code: 200
+2026-03-20 15:03:03,806 [INFO] Response content type: application/json
+2026-03-20 15:03:03,806 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:03:03,807 [INFO] Top-level key: link
+2026-03-20 15:03:03,807 [INFO] Top-level key: datetime
+2026-03-20 15:03:03,807 [INFO] Top-level key: provider
+2026-03-20 15:03:03,808 [INFO] Top-level key: airlines
+2026-03-20 15:03:03,808 [INFO] Top-level key: airports
+2026-03-20 15:03:03,808 [INFO] Top-level key: flights
+2026-03-20 15:03:03,809 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:03:03,809 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:03:03,809 [INFO] Found 144 arrivals
+2026-03-20 15:03:03,810 [INFO] Found 117 departures
+2026-03-20 15:03:03,812 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:03:03,812 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:03,819 [INFO] CSV export completed successfully
+2026-03-20 15:03:03,820 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:03:03,820 [INFO] Loading raw CSV file: ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:03,835 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:03:03,835 [INFO] Starting full cleaning pipeline
+2026-03-20 15:03:03,836 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:03:03,836 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:03:03,836 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:03,837 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:03,837 [INFO] Checking missing values
+2026-03-20 15:03:03,839 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:03:03,839 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:03:03,843 [INFO] Calculating delay in minutes
+2026-03-20 15:03:03,844 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:03:03,845 [INFO] Missing IDs: 191
+2026-03-20 15:03:03,845 [INFO] Cleaning claim column
+2026-03-20 15:03:03,846 [INFO] Cleaning gate column
+2026-03-20 15:03:03,847 [INFO] Standardizing status column
+2026-03-20 15:03:03,848 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'On Time', 'Early', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:03:03,848 [INFO] Extracting primary flight code
+2026-03-20 15:03:03,850 [INFO] Extracting airline code and flight number
+2026-03-20 15:03:03,851 [INFO] Mapping airline codes to airline names
+2026-03-20 15:03:03,853 [INFO] Creating cleaned status column
+2026-03-20 15:03:03,857 [INFO] Creating time-based features
+2026-03-20 15:03:03,859 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:03:03,859 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:03:03,861 [INFO] KPI flags created
+2026-03-20 15:03:03,861 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:03:03,862 [INFO] Step 2 complete
+2026-03-20 15:03:03,862 [INFO] Step 3: Running data quality checks
+2026-03-20 15:03:03,863 [INFO] Rows: 261
+2026-03-20 15:03:03,863 [INFO] Missing IDs: 191
+2026-03-20 15:03:03,863 [INFO] Missing claims: 126
+2026-03-20 15:03:03,864 [INFO] Missing scheduled_time: 0
+2026-03-20 15:03:03,864 [INFO] Missing actual_time: 0
+2026-03-20 15:03:03,865 [INFO] Status distribution:
+status_clean
+On Time      192
+Early         43
+Delayed       25
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:03:03,867 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:03:03,868 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:03:03,868 [INFO] Step 3 complete
+2026-03-20 15:03:03,868 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:03:03,881 [INFO] 
+Top 10 delayed flights:
+    flight_type            city     airline      scheduled_time         actual_time  delay_min status_clean
+62      arrival  Seattle-Tacoma      Alaska 2026-03-20 14:03:00 2026-03-20 16:19:00      136.0      Delayed
+210   departure  Seattle-Tacoma      Alaska 2026-03-20 14:57:00 2026-03-20 17:07:00      130.0      Delayed
+148   departure         Atlanta       Delta 2026-03-20 06:45:00 2026-03-20 08:54:00      129.0      Delayed
+220   departure         Oakland   Southwest 2026-03-20 16:15:00 2026-03-20 17:58:00      103.0      Delayed
+73      arrival         Oakland   Southwest 2026-03-20 15:40:00 2026-03-20 17:23:00      103.0      Delayed
+188   departure       Vancouver  Air Canada 2026-03-20 12:25:00 2026-03-20 13:40:00       75.0      Delayed
+95      arrival  Seattle-Tacoma       Delta 2026-03-20 18:23:00 2026-03-20 19:33:00       70.0      Delayed
+158   departure       Charlotte    American 2026-03-20 07:45:00 2026-03-20 08:55:00       70.0      Delayed
+185   departure         Atlanta       Delta 2026-03-20 11:56:00 2026-03-20 13:05:00       69.0      Delayed
+37      arrival       Vancouver  Air Canada 2026-03-20 11:25:00 2026-03-20 12:31:00       66.0      Delayed
+2026-03-20 15:03:03,882 [INFO] Step 4 complete
+2026-03-20 15:03:03,882 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:03:03,889 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:03,889 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:03:12,972 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:03:12,972 [INFO] Initializing Webscraper
+2026-03-20 15:03:12,972 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:03:12,973 [INFO] Starting scraper pipeline
+2026-03-20 15:03:12,973 [INFO] Sending GET request to flight data source
+2026-03-20 15:03:13,687 [INFO] Request successful with status code 200
+2026-03-20 15:03:13,687 [INFO] Parsing response body as JSON
+2026-03-20 15:03:13,689 [INFO] JSON data loaded successfully
+2026-03-20 15:03:13,689 [INFO] Response status code: 200
+2026-03-20 15:03:13,690 [INFO] Response content type: application/json
+2026-03-20 15:03:13,690 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:03:13,690 [INFO] Top-level key: link
+2026-03-20 15:03:13,691 [INFO] Top-level key: datetime
+2026-03-20 15:03:13,691 [INFO] Top-level key: provider
+2026-03-20 15:03:13,691 [INFO] Top-level key: airlines
+2026-03-20 15:03:13,692 [INFO] Top-level key: airports
+2026-03-20 15:03:13,692 [INFO] Top-level key: flights
+2026-03-20 15:03:13,692 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:03:13,693 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:03:13,693 [INFO] Found 144 arrivals
+2026-03-20 15:03:13,693 [INFO] Found 117 departures
+2026-03-20 15:03:13,696 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:03:13,696 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:13,704 [INFO] CSV export completed successfully
+2026-03-20 15:03:13,705 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:03:13,705 [INFO] Loading raw CSV file: ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:13,719 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:03:13,720 [INFO] Starting full cleaning pipeline
+2026-03-20 15:03:13,720 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:03:13,720 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:03:13,721 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:13,721 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:13,722 [INFO] Checking missing values
+2026-03-20 15:03:13,723 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:03:13,723 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:03:13,726 [INFO] Calculating delay in minutes
+2026-03-20 15:03:13,728 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:03:13,728 [INFO] Missing IDs: 191
+2026-03-20 15:03:13,728 [INFO] Cleaning claim column
+2026-03-20 15:03:13,729 [INFO] Cleaning gate column
+2026-03-20 15:03:13,730 [INFO] Standardizing status column
+2026-03-20 15:03:13,730 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'On Time', 'Early', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:03:13,731 [INFO] Extracting primary flight code
+2026-03-20 15:03:13,732 [INFO] Extracting airline code and flight number
+2026-03-20 15:03:13,734 [INFO] Mapping airline codes to airline names
+2026-03-20 15:03:13,736 [INFO] Creating cleaned status column
+2026-03-20 15:03:13,740 [INFO] Creating time-based features
+2026-03-20 15:03:13,742 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:03:13,742 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:03:13,744 [INFO] KPI flags created
+2026-03-20 15:03:13,744 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:03:13,745 [INFO] Step 2 complete
+2026-03-20 15:03:13,745 [INFO] Step 3: Running data quality checks
+2026-03-20 15:03:13,746 [INFO] Rows: 261
+2026-03-20 15:03:13,746 [INFO] Missing IDs: 191
+2026-03-20 15:03:13,746 [INFO] Missing claims: 126
+2026-03-20 15:03:13,747 [INFO] Missing scheduled_time: 0
+2026-03-20 15:03:13,747 [INFO] Missing actual_time: 0
+2026-03-20 15:03:13,749 [INFO] Status distribution:
+status_clean
+On Time      192
+Early         43
+Delayed       25
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:03:13,750 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:03:13,753 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:03:13,754 [INFO] Step 3 complete
+2026-03-20 15:03:13,754 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:03:13,765 [INFO] 
+Top 10 delayed flights:
+    flight_type            city     airline      scheduled_time         actual_time  delay_min status_clean
+62      arrival  Seattle-Tacoma      Alaska 2026-03-20 14:03:00 2026-03-20 16:19:00      136.0      Delayed
+210   departure  Seattle-Tacoma      Alaska 2026-03-20 14:57:00 2026-03-20 17:07:00      130.0      Delayed
+148   departure         Atlanta       Delta 2026-03-20 06:45:00 2026-03-20 08:54:00      129.0      Delayed
+220   departure         Oakland   Southwest 2026-03-20 16:15:00 2026-03-20 17:58:00      103.0      Delayed
+73      arrival         Oakland   Southwest 2026-03-20 15:40:00 2026-03-20 17:23:00      103.0      Delayed
+188   departure       Vancouver  Air Canada 2026-03-20 12:25:00 2026-03-20 13:40:00       75.0      Delayed
+95      arrival  Seattle-Tacoma       Delta 2026-03-20 18:23:00 2026-03-20 19:33:00       70.0      Delayed
+158   departure       Charlotte    American 2026-03-20 07:45:00 2026-03-20 08:55:00       70.0      Delayed
+185   departure         Atlanta       Delta 2026-03-20 11:56:00 2026-03-20 13:05:00       69.0      Delayed
+37      arrival       Vancouver  Air Canada 2026-03-20 11:25:00 2026-03-20 12:31:00       66.0      Delayed
+2026-03-20 15:03:13,766 [INFO] Step 4 complete
+2026-03-20 15:03:13,766 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:03:13,773 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:13,774 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:03:28,515 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:03:28,515 [INFO] Initializing Webscraper
+2026-03-20 15:03:28,515 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:03:28,515 [INFO] Starting scraper pipeline
+2026-03-20 15:03:28,515 [INFO] Sending GET request to flight data source
+2026-03-20 15:03:29,206 [INFO] Request successful with status code 200
+2026-03-20 15:03:29,206 [INFO] Parsing response body as JSON
+2026-03-20 15:03:29,207 [INFO] JSON data loaded successfully
+2026-03-20 15:03:29,207 [INFO] Response status code: 200
+2026-03-20 15:03:29,207 [INFO] Response content type: application/json
+2026-03-20 15:03:29,208 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:03:29,208 [INFO] Top-level key: link
+2026-03-20 15:03:29,208 [INFO] Top-level key: datetime
+2026-03-20 15:03:29,208 [INFO] Top-level key: provider
+2026-03-20 15:03:29,209 [INFO] Top-level key: airlines
+2026-03-20 15:03:29,209 [INFO] Top-level key: airports
+2026-03-20 15:03:29,209 [INFO] Top-level key: flights
+2026-03-20 15:03:29,209 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:03:29,210 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:03:29,210 [INFO] Found 144 arrivals
+2026-03-20 15:03:29,210 [INFO] Found 117 departures
+2026-03-20 15:03:29,212 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:03:29,212 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:29,221 [INFO] CSV export completed successfully
+2026-03-20 15:03:29,221 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:03:29,222 [INFO] Loading raw CSV file: ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:29,235 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:03:29,236 [INFO] Starting full cleaning pipeline
+2026-03-20 15:03:29,236 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:03:29,236 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:03:29,236 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:29,237 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:03:29,237 [INFO] Checking missing values
+2026-03-20 15:03:29,239 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:03:29,239 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:03:29,242 [INFO] Calculating delay in minutes
+2026-03-20 15:03:29,243 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:03:29,244 [INFO] Missing IDs: 191
+2026-03-20 15:03:29,245 [INFO] Cleaning claim column
+2026-03-20 15:03:29,245 [INFO] Cleaning gate column
+2026-03-20 15:03:29,246 [INFO] Standardizing status column
+2026-03-20 15:03:29,247 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'On Time', 'Early', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:03:29,248 [INFO] Extracting primary flight code
+2026-03-20 15:03:29,250 [INFO] Extracting airline code and flight number
+2026-03-20 15:03:29,251 [INFO] Mapping airline codes to airline names
+2026-03-20 15:03:29,253 [INFO] Creating cleaned status column
+2026-03-20 15:03:29,255 [INFO] Creating time-based features
+2026-03-20 15:03:29,257 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:03:29,257 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:03:29,260 [INFO] KPI flags created
+2026-03-20 15:03:29,260 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:03:29,261 [INFO] Step 2 complete
+2026-03-20 15:03:29,261 [INFO] Step 3: Running data quality checks
+2026-03-20 15:03:29,261 [INFO] Rows: 261
+2026-03-20 15:03:29,262 [INFO] Missing IDs: 191
+2026-03-20 15:03:29,262 [INFO] Missing claims: 126
+2026-03-20 15:03:29,262 [INFO] Missing scheduled_time: 0
+2026-03-20 15:03:29,263 [INFO] Missing actual_time: 0
+2026-03-20 15:03:29,264 [INFO] Status distribution:
+status_clean
+On Time      192
+Early         43
+Delayed       25
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:03:29,266 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:03:29,267 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:03:29,268 [INFO] Step 3 complete
+2026-03-20 15:03:29,268 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:03:29,279 [INFO] 
+Top 10 delayed flights:
+    flight_type            city     airline      scheduled_time         actual_time  delay_min status_clean
+62      arrival  Seattle-Tacoma      Alaska 2026-03-20 14:03:00 2026-03-20 16:19:00      136.0      Delayed
+210   departure  Seattle-Tacoma      Alaska 2026-03-20 14:57:00 2026-03-20 17:07:00      130.0      Delayed
+148   departure         Atlanta       Delta 2026-03-20 06:45:00 2026-03-20 08:54:00      129.0      Delayed
+220   departure         Oakland   Southwest 2026-03-20 16:15:00 2026-03-20 17:58:00      103.0      Delayed
+73      arrival         Oakland   Southwest 2026-03-20 15:40:00 2026-03-20 17:23:00      103.0      Delayed
+188   departure       Vancouver  Air Canada 2026-03-20 12:25:00 2026-03-20 13:40:00       75.0      Delayed
+95      arrival  Seattle-Tacoma       Delta 2026-03-20 18:23:00 2026-03-20 19:33:00       70.0      Delayed
+158   departure       Charlotte    American 2026-03-20 07:45:00 2026-03-20 08:55:00       70.0      Delayed
+185   departure         Atlanta       Delta 2026-03-20 11:56:00 2026-03-20 13:05:00       69.0      Delayed
+37      arrival       Vancouver  Air Canada 2026-03-20 11:25:00 2026-03-20 12:31:00       66.0      Delayed
+2026-03-20 15:03:29,279 [INFO] Step 4 complete
+2026-03-20 15:03:29,279 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:03:29,286 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:03:29,286 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:04:00,254 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:04:00,254 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:04:00,255 [INFO] Scheduler started
+2026-03-20 15:04:52,788 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:04:52,789 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:04:52,789 [INFO] Scheduler started
+2026-03-20 15:09:38,484 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:09:38,485 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:09:38,485 [INFO] Scheduler started
+2026-03-20 15:10:49,901 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:10:49,902 [INFO] Scheduler started
+2026-03-20 15:10:49,902 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:10:49,903 [INFO] Scheduler started
+2026-03-20 15:11:00,002 [INFO] Scheduler stopped
+2026-03-20 15:11:53,302 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 15:11:53,303 [INFO] Scheduler started
+2026-03-20 15:11:53,303 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 15:11:53,303 [INFO] Scheduler started
+2026-03-20 15:12:00,018 [INFO] Running job "run_pipeline (trigger: cron[hour='15', minute='12'], next run at: 2026-03-20 15:12:00 PDT)" (scheduled at 2026-03-20 15:12:00-07:00)
+2026-03-20 15:12:00,021 [INFO] Starting pipeline
+2026-03-20 15:12:00,022 [INFO] Initializing Webscraper
+2026-03-20 15:12:00,022 [INFO] Scraper configured with URL: https://s3-us-west-2.amazonaws.com/files.ocair.com/data/sna_export.js
+2026-03-20 15:12:00,022 [INFO] Starting scraper pipeline
+2026-03-20 15:12:00,023 [INFO] Sending GET request to flight data source
+2026-03-20 15:12:00,707 [INFO] Request successful with status code 200
+2026-03-20 15:12:00,708 [INFO] Parsing response body as JSON
+2026-03-20 15:12:00,710 [INFO] JSON data loaded successfully
+2026-03-20 15:12:00,710 [INFO] Response status code: 200
+2026-03-20 15:12:00,711 [INFO] Response content type: application/json
+2026-03-20 15:12:00,712 [INFO] Listing top-level keys from JSON response
+2026-03-20 15:12:00,712 [INFO] Top-level key: link
+2026-03-20 15:12:00,713 [INFO] Top-level key: datetime
+2026-03-20 15:12:00,714 [INFO] Top-level key: provider
+2026-03-20 15:12:00,714 [INFO] Top-level key: airlines
+2026-03-20 15:12:00,715 [INFO] Top-level key: airports
+2026-03-20 15:12:00,716 [INFO] Top-level key: flights
+2026-03-20 15:12:00,716 [INFO] Creating DataFrame for CSV export
+2026-03-20 15:12:00,717 [INFO] Transforming raw JSON into tabular flight records
+2026-03-20 15:12:00,718 [INFO] Found 144 arrivals
+2026-03-20 15:12:00,718 [INFO] Found 117 departures
+2026-03-20 15:12:00,722 [INFO] Created DataFrame with shape: (261, 10)
+2026-03-20 15:12:00,723 [INFO] Exporting scraped data to ./data/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:12:00,733 [INFO] CSV export completed successfully
+2026-03-20 15:12:00,734 [INFO] Scraper pipeline finished successfully
+2026-03-20 15:12:00,735 [INFO] Loading raw CSV file: data\JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:12:00,750 [INFO] Loaded DataFrame with 261 rows and 10 columns
+2026-03-20 15:12:00,750 [INFO] Starting full cleaning pipeline
+2026-03-20 15:12:00,751 [INFO] Step 1: Starting data cleaning
+2026-03-20 15:12:00,751 [INFO] Initial DataFrame shape: (261, 10)
+2026-03-20 15:12:00,752 [INFO] Columns before cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:12:00,753 [INFO] Columns after cleaning: ['id', 'flight_type', 'city', 'status', 'gate', 'claim', 'scheduled_time', 'actual_time', 'flight_codes', 'route_airport_code']
+2026-03-20 15:12:00,754 [INFO] Checking missing values
+2026-03-20 15:12:00,756 [INFO] 
+id                      0
+flight_type             0
+city                    0
+status                  0
+gate                    2
+claim                 126
+scheduled_time          0
+actual_time             0
+flight_codes            0
+route_airport_code      0
+dtype: int64
+2026-03-20 15:12:00,756 [INFO] Converting scheduled_time and actual_time to datetime
+2026-03-20 15:12:00,760 [INFO] Calculating delay in minutes
+2026-03-20 15:12:00,761 [INFO] Cleaning ID column (convert to numeric, replace -1 with NaN)
+2026-03-20 15:12:00,762 [INFO] Missing IDs: 191
+2026-03-20 15:12:00,762 [INFO] Cleaning claim column
+2026-03-20 15:12:00,763 [INFO] Cleaning gate column
+2026-03-20 15:12:00,763 [INFO] Standardizing status column
+2026-03-20 15:12:00,765 [INFO] Unique statuses: <StringArray>
+['Arrived', 'Cancelled', 'Delayed', 'Early', 'On Time', 'Departed',
+ 'Boarding']
+Length: 7, dtype: str
+2026-03-20 15:12:00,765 [INFO] Extracting primary flight code
+2026-03-20 15:12:00,766 [INFO] Extracting airline code and flight number
+2026-03-20 15:12:00,769 [INFO] Mapping airline codes to airline names
+2026-03-20 15:12:00,770 [INFO] Creating cleaned status column
+2026-03-20 15:12:00,774 [INFO] Creating time-based features
+2026-03-20 15:12:00,776 [INFO] Step 1 complete: Data cleaning finished
+2026-03-20 15:12:00,776 [INFO] Step 2: Creating KPI columns
+2026-03-20 15:12:00,778 [INFO] KPI flags created
+2026-03-20 15:12:00,778 [INFO] Calculating OTP (On-Time Performance within 15 minutes)
+2026-03-20 15:12:00,779 [INFO] Step 2 complete
+2026-03-20 15:12:00,779 [INFO] Step 3: Running data quality checks
+2026-03-20 15:12:00,779 [INFO] Rows: 261
+2026-03-20 15:12:00,780 [INFO] Missing IDs: 191
+2026-03-20 15:12:00,780 [INFO] Missing claims: 126
+2026-03-20 15:12:00,781 [INFO] Missing scheduled_time: 0
+2026-03-20 15:12:00,781 [INFO] Missing actual_time: 0
+2026-03-20 15:12:00,782 [INFO] Status distribution:
+status_clean
+On Time      190
+Early         46
+Delayed       24
+Cancelled      1
+Name: count, dtype: int64
+2026-03-20 15:12:00,783 [INFO] Flight type distribution:
+flight_type
+arrival      144
+departure    117
+Name: count, dtype: int64
+2026-03-20 15:12:00,785 [INFO] Airline distribution:
+airline
+Southwest     70
+Alaska        46
+American      38
+United        38
+Delta         32
+Other         19
+Breeze        10
+Spirit         6
+Air Canada     2
+Name: count, dtype: int64
+2026-03-20 15:12:00,785 [INFO] Step 3 complete
+2026-03-20 15:12:00,786 [INFO] Step 4: Inspecting top 10 delays
+2026-03-20 15:12:00,798 [INFO] 
+Top 10 delayed flights:
+    flight_type            city  ... delay_min status_clean
+62      arrival  Seattle-Tacoma  ...     136.0      Delayed
+210   departure  Seattle-Tacoma  ...     130.0      Delayed
+148   departure         Atlanta  ...     129.0      Delayed
+220   departure         Oakland  ...     103.0      Delayed
+73      arrival         Oakland  ...     103.0      Delayed
+188   departure       Vancouver  ...      75.0      Delayed
+158   departure       Charlotte  ...      70.0      Delayed
+95      arrival  Seattle-Tacoma  ...      70.0      Delayed
+185   departure         Atlanta  ...      69.0      Delayed
+37      arrival       Vancouver  ...      66.0      Delayed
+
+[10 rows x 7 columns]
+2026-03-20 15:12:00,798 [INFO] Step 4 complete
+2026-03-20 15:12:00,798 [INFO] Step 5: Exporting cleaned data
+2026-03-20 15:12:00,804 [INFO] Data exported successfully to: ./data/processed/JohnWayneFlights_2026-03-20.csv
+2026-03-20 15:12:00,805 [INFO] Cleaning pipeline completed successfully
+2026-03-20 15:12:00,805 [INFO] Pipeline completed successfully
+2026-03-20 15:12:00,806 [INFO] Job "run_pipeline (trigger: cron[hour='15', minute='12'], next run at: 2026-03-21 15:12:00 PDT)" executed successfully
