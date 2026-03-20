@@ -1,8 +1,5 @@
 # John Wayne Airport Performance Analytics
 
-<<<<<<< HEAD
-A data engineering and analytics project that collects live flight data from John Wayne Airport (SNA) and analyzes operational performance metrics such as delays, flight volume, and route trends.
-=======
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-orange)
 ![Status](https://img.shields.io/badge/Project-Active-brightgreen)
@@ -11,7 +8,6 @@ A data engineering and analytics project that collects live flight data from Joh
 ![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-yellow)
 
 A data engineering and analytics project that collects live flight data from **John Wayne Airport (SNA)** and analyzes operational performance metrics such as delays, flight volume, and route trends.
->>>>>>> 521f9b49f3cad5aaa88c1f330ae6d13865da69e1
 
 This project simulates a real-world airport performance management system, including data ingestion, cleaning, KPI generation, and dashboard reporting.
 
