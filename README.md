@@ -167,7 +167,7 @@ pip install -r requirements.txt
 ### 4. Run the scraper
 
 ```
-python py_files/main.py
+python py_files/pipeline.py
 ```
 
 The script will collect the latest flight data and export a CSV file into the `data/` directory.
