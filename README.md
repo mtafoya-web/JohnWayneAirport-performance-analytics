@@ -163,13 +163,9 @@ pip install -r requirements.txt
 
 4. Run the pipeline
 
-<<<<<<< HEAD
-python py_files/main.py
-=======
 ```
 python py_files/pipeline.py
 ```
->>>>>>> 521f9b49f3cad5aaa88c1f330ae6d13865da69e1
 
 This will scrape the latest flight data, save the raw dataset, clean and transform the data, and generate an analytics-ready dataset.
 

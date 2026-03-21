@@ -919,3 +919,7 @@ Top 10 delayed flights:
 2026-03-20 15:12:00,805 [INFO] Cleaning pipeline completed successfully
 2026-03-20 15:12:00,805 [INFO] Pipeline completed successfully
 2026-03-20 15:12:00,806 [INFO] Job "run_pipeline (trigger: cron[hour='15', minute='12'], next run at: 2026-03-21 15:12:00 PDT)" executed successfully
+2026-03-20 21:38:42,294 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-20 21:38:42,295 [INFO] Scheduler started
+2026-03-20 21:38:42,296 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-20 21:38:42,296 [INFO] Scheduler started
