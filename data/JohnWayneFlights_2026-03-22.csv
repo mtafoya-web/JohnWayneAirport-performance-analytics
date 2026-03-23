@@ -1,0 +1,268 @@
+id,flight_type,city,status,gate,claim,scheduled_time,actual_time,flight_codes,route_airport_code
+711272,arrival,Sacramento,Arrived,19,5,2026-03-22 08:25:00,2026-03-22 08:58:00,WN8504,SMF
+-1,arrival,Dallas-Ft. Worth,Arrived,7,1,2026-03-22 08:33:00,2026-03-22 08:26:00,AA1686,DFW
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 08:35:00,2026-03-22 08:27:00,AS3440,SFO
+710817,arrival,Sacramento,Arrived,21,5,2026-03-22 08:35:00,2026-03-22 08:30:00,WN726,SMF
+-1,arrival,Provo,Arrived,4,2,2026-03-22 08:40:00,2026-03-22 08:30:00,MX602,PVU
+710819,arrival,Phoenix,Arrived,17,5,2026-03-22 08:45:00,2026-03-22 08:31:00,WN2566,PHX
+-1,arrival,Phoenix,Arrived,15,6,2026-03-22 08:50:00,2026-03-22 09:24:00,F91719,PHX
+-1,arrival,Phoenix,Arrived,6,1,2026-03-22 08:55:00,2026-03-22 08:58:00,AA543,PHX
+710828,arrival,San Jose,Arrived,20,5,2026-03-22 08:55:00,2026-03-22 08:44:00,WN4455,SJC
+-1,arrival,Provo,Arrived,16,6,2026-03-22 08:59:00,2026-03-22 08:41:00,G43211,PVU
+-1,arrival,San Francisco,Arrived,8,4,2026-03-22 09:03:00,2026-03-22 08:58:00,"UA5937, AC4246",SFO
+-1,arrival,Salt Lake City,Arrived,2,2,2026-03-22 09:09:00,2026-03-22 08:50:00,DL1198,SLC
+710830,arrival,Oakland,Arrived,18,5,2026-03-22 09:10:00,2026-03-22 09:05:00,WN1199,OAK
+-1,arrival,Boise,Arrived,11,3,2026-03-22 09:11:00,2026-03-22 08:56:00,AS486,BOI
+-1,arrival,Portland,Arrived,13,3,2026-03-22 09:38:00,2026-03-22 09:30:00,AS1404,PDX
+710841,arrival,Sacramento,Arrived,19,5,2026-03-22 09:40:00,2026-03-22 10:31:00,WN2206,SMF
+-1,arrival,Denver,Arrived,9,4,2026-03-22 09:48:00,2026-03-22 09:27:00,"UA2666, AC5491",DEN
+710846,arrival,Las Vegas,Arrived,17,5,2026-03-22 09:50:00,2026-03-22 09:48:00,WN935,LAS
+-1,arrival,Everett,Arrived,12,3,2026-03-22 09:50:00,2026-03-22 09:28:00,AS2270,PAE
+-1,arrival,Las Vegas,Arrived,,6,2026-03-22 09:53:00,2026-03-22 09:53:00,NK1622,LAS
+-1,arrival,Dallas-Ft. Worth,Arrived,5,1,2026-03-22 10:05:00,2026-03-22 09:46:00,AA3197,DFW
+710851,arrival,Denver,Arrived,21,5,2026-03-22 10:05:00,2026-03-22 10:01:00,WN361,DEN
+-1,arrival,Newark,Arrived,10,4,2026-03-22 10:09:00,2026-03-22 10:09:00,"UA785, AC3741",EWR
+-1,arrival,Seattle-Tacoma,Arrived,4,2,2026-03-22 10:14:00,2026-03-22 09:51:00,DL2101,SEA
+-1,arrival,Seattle-Tacoma,Arrived,11,3,2026-03-22 10:19:00,2026-03-22 10:02:00,AS699,SEA
+-1,arrival,Chicago/O'Hare,Arrived,6,1,2026-03-22 10:46:00,2026-03-22 10:38:00,AA2285,ORD
+-1,arrival,Detroit,Arrived,3,2,2026-03-22 10:46:00,2026-03-22 10:28:00,DL1857,DTW
+-1,arrival,Denver,Arrived,15,6,2026-03-22 10:47:00,2026-03-22 10:23:00,F94371,DEN
+710861,arrival,San Jose,Arrived,18,5,2026-03-22 11:05:00,2026-03-22 11:10:00,WN2443,SJC
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 11:08:00,2026-03-22 10:59:00,AS3034,SFO
+-1,arrival,Las Vegas,Arrived,4,2,2026-03-22 11:16:00,2026-03-22 11:17:00,DL4078,LAS
+-1,arrival,Seattle-Tacoma,Arrived,13,3,2026-03-22 11:19:00,2026-03-22 10:46:00,AS759,SEA
+-1,arrival,Atlanta,Arrived,2,2,2026-03-22 11:24:00,2026-03-22 11:01:00,DL329,ATL
+-1,arrival,Vancouver,Arrived,14,6,2026-03-22 11:25:00,2026-03-22 11:16:00,AC598,YVR
+710864,arrival,Las Vegas,Arrived,20,5,2026-03-22 11:25:00,2026-03-22 11:08:00,WN1479,LAS
+-1,arrival,Houston,Arrived,8,4,2026-03-22 11:27:00,2026-03-22 11:34:00,UA1383,IAH
+710868,arrival,Oakland,Arrived,17,5,2026-03-22 11:35:00,2026-03-22 11:29:00,WN1984,OAK
+-1,arrival,Phoenix,Arrived,6,1,2026-03-22 11:36:00,2026-03-22 11:44:00,AA456,PHX
+-1,arrival,Chicago/O'Hare,Arrived,9,3,2026-03-22 11:51:00,2026-03-22 11:43:00,"UA1304, AC5451",ORD
+-1,arrival,New York/JFK,Arrived,7,1,2026-03-22 11:52:00,2026-03-22 11:27:00,AA3085,JFK
+-1,arrival,Dallas-Ft. Worth,Arrived,5,1,2026-03-22 11:57:00,2026-03-22 11:32:00,AA2264,DFW
+710877,arrival,Sacramento,Arrived,19,5,2026-03-22 12:10:00,2026-03-22 12:04:00,WN813,SMF
+710878,arrival,Phoenix,Arrived,18,5,2026-03-22 12:15:00,2026-03-22 12:07:00,WN4507,PHX
+-1,arrival,Salt Lake City,Arrived,4,2,2026-03-22 12:20:00,2026-03-22 13:02:00,DL1189,SLC
+-1,arrival,San Francisco,Arrived,10,4,2026-03-22 12:22:00,2026-03-22 12:09:00,"UA643, AC3054",SFO
+-1,arrival,Provo,Arrived,16,6,2026-03-22 12:29:00,2026-03-22 12:04:00,G43220,PVU
+-1,arrival,Phoenix,Arrived,6,1,2026-03-22 12:37:00,2026-03-22 12:38:00,AA457,PHX
+-1,arrival,Minneapolis-St. Paul,Arrived,3,2,2026-03-22 12:47:00,2026-03-22 12:32:00,DL2081,MSP
+710889,arrival,San Jose,Arrived,21,5,2026-03-22 12:50:00,2026-03-22 12:37:00,WN3810,SJC
+-1,arrival,Denver,Arrived,8,4,2026-03-22 13:15:00,2026-03-22 13:12:00,"UA1320, AC5277",DEN
+-1,arrival,Portland,Arrived,11,3,2026-03-22 13:24:00,2026-03-22 16:00:00,AS588,PDX
+-1,arrival,Santa Rosa,Arrived,12,3,2026-03-22 13:24:00,2026-03-22 13:17:00,AS3287,STS
+-1,arrival,Calgary,Arrived,14,6,2026-03-22 13:24:00,2026-03-22 13:05:00,WS1580,YYC
+710892,arrival,Las Vegas,Arrived,19,5,2026-03-22 13:25:00,2026-03-22 13:36:00,WN3280,LAS
+710894,arrival,Oakland,Arrived,20,5,2026-03-22 13:25:00,2026-03-22 13:08:00,WN4100,OAK
+710895,arrival,Phoenix,Arrived,18,5,2026-03-22 13:30:00,2026-03-22 13:36:00,WN2776,PHX
+-1,arrival,Provo,Arrived,2,2,2026-03-22 13:49:00,2026-03-22 13:32:00,MX617,PVU
+710896,arrival,Denver,Arrived,21,5,2026-03-22 13:55:00,2026-03-22 13:51:00,WN133,DEN
+-1,arrival,Dallas-Ft. Worth,Arrived,7,1,2026-03-22 13:57:00,2026-03-22 13:37:00,AA2861,DFW
+-1,arrival,Las Vegas,Arrived,15,6,2026-03-22 13:58:00,2026-03-22 14:29:00,NK949,LAS
+-1,arrival,Seattle-Tacoma,Arrived,11,3,2026-03-22 14:03:00,2026-03-22 13:37:00,AS1357,SEA
+-1,arrival,Houston,Arrived,9,4,2026-03-22 14:11:00,2026-03-22 13:24:00,UA1612,IAH
+-1,arrival,Chicago/O'Hare,Arrived,6,1,2026-03-22 14:23:00,2026-03-22 14:44:00,AA2212,ORD
+710900,arrival,Las Vegas,Arrived,20,5,2026-03-22 14:25:00,2026-03-22 14:31:00,WN2303,LAS
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 14:34:00,2026-03-22 14:21:00,AS3267,SFO
+-1,arrival,Phoenix-Mesa,Arrived,16,6,2026-03-22 14:39:00,2026-03-22 14:59:00,G43530,AZA
+710902,arrival,Austin,Arrived,19,5,2026-03-22 14:40:00,2026-03-22 14:37:00,WN1597,AUS
+-1,arrival,San Francisco,Arrived,10,4,2026-03-22 14:52:00,2026-03-22 14:55:00,"UA5440, AC5458",SFO
+710904,arrival,San Jose Del Cabo,Arrived,14,5,2026-03-22 15:00:00,2026-03-22 15:04:00,WN641,SJD
+-1,arrival,Eugene Airport,Arrived,17,6,2026-03-22 15:09:00,2026-03-22 14:49:00,G43210,EUG
+710906,arrival,San Jose,Arrived,21,5,2026-03-22 15:35:00,2026-03-22 19:00:00,WN2803,SJC
+-1,arrival,Phoenix,Arrived,6,1,2026-03-22 15:42:00,2026-03-22 16:42:00,AA2094,PHX
+-1,arrival,Las Vegas,Arrived,2,2,2026-03-22 15:48:00,2026-03-22 15:43:00,MX683,LAS
+-1,arrival,Dallas-Ft. Worth,Arrived,5,1,2026-03-22 15:54:00,2026-03-22 16:19:00,AA2659,DFW
+-1,arrival,Tucson,Arrived,12,3,2026-03-22 16:02:00,2026-03-22 15:52:00,AS3471,TUS
+710908,arrival,Sacramento,Arrived,19,5,2026-03-22 16:10:00,2026-03-22 15:58:00,WN4501,SMF
+-1,arrival,Salt Lake City,Arrived,3,2,2026-03-22 16:16:00,2026-03-22 16:01:00,DL1277,SLC
+-1,arrival,Seattle-Tacoma,Arrived,13,3,2026-03-22 16:29:00,2026-03-22 16:07:00,AS773,SEA
+-1,arrival,Las Vegas,Arrived,4,2,2026-03-22 16:48:00,2026-03-22 16:26:00,DL4074,LAS
+710910,arrival,Oakland,Arrived,17,5,2026-03-22 16:50:00,2026-03-22 17:56:00,WN4102,OAK
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 16:56:00,2026-03-22 16:47:00,AS3417,SFO
+-1,arrival,Salt Lake City,Arrived,15,6,2026-03-22 16:57:00,2026-03-22 16:34:00,F91365,SLC
+710912,arrival,Sacramento,Arrived,21,5,2026-03-22 17:15:00,2026-03-22 17:10:00,WN1271,SMF
+710913,arrival,Puerto Vallarta,Arrived,14,5,2026-03-22 17:20:00,2026-03-22 17:04:00,WN764,PVR
+-1,arrival,Portland,Arrived,11,3,2026-03-22 17:22:00,2026-03-22 17:50:00,AS264,PDX
+-1,arrival,Newark,Arrived,8,4,2026-03-22 17:28:00,2026-03-22 16:57:00,"UA1847, AC3744",EWR
+-1,arrival,Denver,Arrived,10,4,2026-03-22 17:32:00,2026-03-22 17:12:00,"UA422, AC3635",DEN
+-1,arrival,Medford,Arrived,16,6,2026-03-22 17:36:00,2026-03-22 17:22:00,G41713,MFR
+710916,arrival,Phoenix,Arrived,18,5,2026-03-22 17:50:00,2026-03-22 17:59:00,WN3139,PHX
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 17:58:00,2026-03-22 17:48:00,AS3494,SFO
+-1,arrival,Las Vegas,Arrived,15,6,2026-03-22 18:02:00,2026-03-22 17:50:00,F93737,LAS
+-1,arrival,Salt Lake City,Arrived,4,2,2026-03-22 18:10:00,2026-03-22 17:57:00,DL561,SLC
+710917,arrival,Las Vegas,Arrived,20,5,2026-03-22 18:10:00,2026-03-22 18:08:00,WN3013,LAS
+710918,arrival,Denver,Arrived,19,5,2026-03-22 18:15:00,2026-03-22 18:45:00,WN1196,DEN
+-1,arrival,Seattle-Tacoma,Arrived,3,2,2026-03-22 18:23:00,2026-03-22 18:02:00,DL2318,SEA
+-1,arrival,Dallas-Ft. Worth,Arrived,7,1,2026-03-22 18:27:00,2026-03-22 18:26:00,AA3223,DFW
+-1,arrival,San Francisco,Arrived,1A,4,2026-03-22 18:33:00,2026-03-22 18:21:00,"UA5650, AC4332",SFO
+710920,arrival,San Jose,Arrived,17,5,2026-03-22 18:35:00,2026-03-22 19:13:00,WN4459,SJC
+-1,arrival,Boise,Arrived,16,6,2026-03-22 18:36:00,2026-03-22 18:31:00,G41600,BOI
+-1,arrival,Chicago/O'Hare,Arrived,10,4,2026-03-22 18:57:00,2026-03-22 19:27:00,"UA1317, AC5455",ORD
+-1,arrival,Phoenix,Arrived,5,1,2026-03-22 18:58:00,2026-03-22 18:51:00,AA2088,PHX
+710924,arrival,Phoenix,Arrived,20,5,2026-03-22 19:00:00,2026-03-22 20:18:00,WN4001,PHX
+-1,arrival,Provo,Arrived,2,2,2026-03-22 19:03:00,2026-03-22 18:27:00,MX604,PVU
+-1,arrival,Spokane,Arrived,13,3,2026-03-22 19:05:00,2026-03-22 18:54:00,AS2337,GEG
+-1,arrival,San Francisco,Arrived,15,6,2026-03-22 19:08:00,2026-03-22 18:48:00,F94202,SFO
+710925,arrival,Oakland,Arrived,20,5,2026-03-22 19:10:00,2026-03-22 19:05:00,WN4504,OAK
+-1,arrival,Santa Rosa,Arrived,12,3,2026-03-22 19:31:00,2026-03-22 19:31:00,AS3432,STS
+-1,arrival,Atlanta,Arrived,3,2,2026-03-22 19:42:00,2026-03-22 19:20:00,DL826,ATL
+-1,arrival,Seattle-Tacoma,Arrived,11,3,2026-03-22 19:46:00,2026-03-22 19:35:00,AS269,SEA
+710938,arrival,San Jose,Arrived,21,5,2026-03-22 20:00:00,2026-03-22 20:21:00,WN4460,SJC
+-1,arrival,Newark,Arrived,9,4,2026-03-22 20:18:00,2026-03-22 19:55:00,"UA2415, AC3739",EWR
+710940,arrival,Las Vegas,Arrived,20,5,2026-03-22 20:20:00,2026-03-22 21:14:00,WN147,LAS
+710942,arrival,Oakland,Arrived,17,5,2026-03-22 20:20:00,2026-03-22 20:08:00,WN4103,OAK
+710941,arrival,Sacramento,Arrived,18,5,2026-03-22 20:20:00,2026-03-22 20:25:00,WN2748,SMF
+-1,arrival,Dallas-Ft. Worth,Arrived,5,1,2026-03-22 20:23:00,2026-03-22 21:31:00,AA1112,DFW
+710943,arrival,Phoenix,Arrived,19,5,2026-03-22 20:30:00,2026-03-22 20:42:00,WN4508,PHX
+-1,arrival,San Francisco,Arrived,8,4,2026-03-22 20:50:00,2026-03-22 20:30:00,"UA589, AC4186",SFO
+-1,arrival,Minneapolis-St. Paul,Arrived,2,2,2026-03-22 20:56:00,2026-03-22 20:47:00,DL2107,MSP
+-1,arrival,Denver,Arrived,10,4,2026-03-22 21:03:00,2026-03-22 20:51:00,"UA1704, AC5385",DEN
+710954,arrival,San Jose,Arrived,20,5,2026-03-22 21:05:00,2026-03-22 22:36:00,WN1543,SJC
+-1,arrival,Las Vegas,Arrived,16,6,2026-03-22 21:13:00,2026-03-22 21:28:00,NK1626,LAS
+-1,arrival,Charlotte,Arrived,7,1,2026-03-22 21:17:00,2026-03-22 21:01:00,AA1140,CLT
+-1,arrival,Pasco,Arrived,14,6,2026-03-22 21:20:00,2026-03-22 21:40:00,G43532,PSC
+710960,arrival,Sacramento,Arrived,21,5,2026-03-22 21:20:00,2026-03-22 21:14:00,WN4502,SMF
+710961,arrival,Las Vegas,Arrived,18,5,2026-03-22 21:30:00,2026-03-22 21:57:00,WN1973,LAS
+-1,arrival,Seattle-Tacoma,Arrived,15,3,2026-03-22 21:30:00,2026-03-22 21:21:00,AS792,SEA
+-1,arrival,Grand Junction,Arrived,4,2,2026-03-22 21:33:00,2026-03-22 21:05:00,MX625,GJT
+-1,arrival,Chicago/O'Hare,Arrived,7,1,2026-03-22 21:39:00,2026-03-22 22:33:00,AA1179,ORD
+-1,arrival,Houston,Arrived,10,4,2026-03-22 21:45:00,2026-03-22 21:24:00,UA1590,IAH
+710963,arrival,Oakland,Arrived,19,5,2026-03-22 21:45:00,2026-03-22 22:32:00,WN4619,OAK
+710966,arrival,Denver,Arrived,19,5,2026-03-22 21:55:00,2026-03-22 22:15:00,WN2010,DEN
+-1,arrival,Salt Lake City,Arrived,1A,2,2026-03-22 21:55:00,2026-03-22 21:30:00,DL1304,SLC
+-1,arrival,Phoenix,Arrived,6,1,2026-03-22 21:56:00,2026-03-22 21:45:00,AA2637,PHX
+710969,arrival,Phoenix,Arrived,20,5,2026-03-22 22:10:00,2026-03-22 21:49:00,WN2859,PHX
+-1,arrival,Atlanta,Arrived,2,2,2026-03-22 22:12:00,2026-03-22 23:24:00,DL556,ATL
+-1,arrival,Denver,Arrived,11,4,2026-03-22 22:15:00,2026-03-22 21:52:00,"UA725, AC3436",DEN
+710972,arrival,San Jose,Arrived,17,6,2026-03-22 22:20:00,2026-03-22 21:59:00,WN2511,SJC
+-1,arrival,Portland,Arrived,14,3,2026-03-22 22:24:00,2026-03-22 22:17:00,AS501,PDX
+-1,arrival,Chicago/O'Hare,Arrived,9,4,2026-03-22 22:26:00,2026-03-22 22:24:00,"UA2315, AC5119",ORD
+-1,arrival,Seattle-Tacoma,Arrived,3,2,2026-03-22 22:29:00,2026-03-22 22:04:00,DL1105,SEA
+-1,arrival,Seattle-Tacoma,Arrived,13,3,2026-03-22 22:30:00,2026-03-22 22:17:00,AS1387,SEA
+-1,arrival,San Francisco,Arrived,12,3,2026-03-22 22:30:00,2026-03-22 22:07:00,AS3365,SFO
+-1,arrival,Dallas-Ft. Worth,Arrived,5,1,2026-03-22 22:45:00,2026-03-22 22:32:00,AA2370,DFW
+-1,departure,Dallas-Ft. Worth,Departed,5,,2026-03-22 07:45:00,2026-03-22 07:41:00,AA1382,DFW
+-1,departure,Charlotte,Departed,7,,2026-03-22 07:45:00,2026-03-22 07:46:00,AA2209,CLT
+-1,departure,Phoenix,Departed,6,,2026-03-22 07:45:00,2026-03-22 07:40:00,AA628,PHX
+-1,departure,Seattle-Tacoma,Departed,13,,2026-03-22 07:45:00,2026-03-22 07:45:00,AS1325,SEA
+-1,departure,Portland,Departed,15,,2026-03-22 07:45:00,2026-03-22 07:41:00,AS750,PDX
+-1,departure,Seattle-Tacoma,Departed,3,,2026-03-22 07:45:00,2026-03-22 07:42:00,DL1293,SEA
+-1,departure,Las Vegas,Departed,4,,2026-03-22 07:45:00,2026-03-22 07:38:00,MX682,LAS
+-1,departure,Las Vegas,Departed,16,,2026-03-22 07:45:00,2026-03-22 07:38:00,NK714,LAS
+710803,departure,Oakland,Departed,18,,2026-03-22 07:45:00,2026-03-22 07:47:00,WN4506,OAK
+-1,departure,Newark,Departed,8,,2026-03-22 07:50:00,2026-03-22 07:47:00,"UA661, AC4076",EWR
+-1,departure,San Francisco,Departed,12,,2026-03-22 07:53:00,2026-03-22 07:52:00,AS3434,SFO
+-1,departure,San Francisco,Departed,10,,2026-03-22 08:00:00,2026-03-22 07:53:00,"UA1326, AC5213",SFO
+710811,departure,Phoenix,Departed,19,,2026-03-22 08:00:00,2026-03-22 07:58:00,WN426,PHX
+710809,departure,Sacramento,Departed,17,,2026-03-22 08:00:00,2026-03-22 08:00:00,WN3281,SMF
+-1,departure,Salt Lake City,Departed,1A,,2026-03-22 08:05:00,2026-03-22 08:00:00,DL1185,SLC
+-1,departure,Houston,Departed,9,,2026-03-22 08:10:00,2026-03-22 08:00:00,UA700,IAH
+-1,departure,Atlanta,Departed,2,,2026-03-22 08:30:00,2026-03-22 08:31:00,DL721,ATL
+-1,departure,Dallas-Ft. Worth,Departed,6,,2026-03-22 08:45:00,2026-03-22 08:48:00,AA3218,DFW
+710818,departure,Las Vegas,Departed,22B,,2026-03-22 08:45:00,2026-03-22 08:55:00,WN2240,LAS
+-1,departure,Denver,Departed,11,,2026-03-22 08:49:00,2026-03-22 08:47:00,"UA489, AC4124",DEN
+-1,departure,Chicago/O'Hare,Departed,5,,2026-03-22 08:55:00,2026-03-22 08:54:00,AA2590,ORD
+-1,departure,Seattle-Tacoma,Departed,14,,2026-03-22 08:59:00,2026-03-22 08:51:00,AS702,SEA
+-1,departure,Minneapolis-St. Paul,Departed,3,,2026-03-22 09:00:00,2026-03-22 08:54:00,DL2185,MSP
+-1,departure,San Francisco,Departed,12,,2026-03-22 09:12:00,2026-03-22 09:07:00,AS3440,SFO
+-1,departure,Provo,Departed,4,,2026-03-22 09:20:00,2026-03-22 09:27:00,MX616,PVU
+710836,departure,Sacramento,Departed,17,,2026-03-22 09:20:00,2026-03-22 09:14:00,WN2566,SMF
+-1,departure,Dallas-Ft. Worth,Departed,7,,2026-03-22 09:23:00,2026-03-22 09:21:00,AA1686,DFW
+-1,departure,Salt Lake City,Departed,,,2026-03-22 09:40:00,2026-03-22 09:58:00,F91366,SLC
+710842,departure,Oakland,Departed,18,,2026-03-22 09:45:00,2026-03-22 09:43:00,WN404,OAK
+-1,departure,Phoenix,Departed,6,,2026-03-22 09:45:00,2026-03-22 10:00:00,AA543,PHX
+-1,departure,Eugene Airport,Departed,16,,2026-03-22 09:49:00,2026-03-22 09:35:00,G41602,EUG
+-1,departure,Boise,Departed,11,,2026-03-22 09:59:00,2026-03-22 09:54:00,AS485,BOI
+-1,departure,Salt Lake City,Departed,2,,2026-03-22 09:59:00,2026-03-22 09:49:00,DL1198,SLC
+-1,departure,San Francisco,Departed,8,,2026-03-22 10:05:00,2026-03-22 09:53:00,"UA5309, AC4589",SFO
+710852,departure,Las Vegas,Departed,19,,2026-03-22 10:15:00,2026-03-22 11:10:00,WN2206,LAS
+710855,departure,Phoenix,Departed,17,,2026-03-22 10:25:00,2026-03-22 10:28:00,WN574,PHX
+-1,departure,Seattle-Tacoma,Departed,13,,2026-03-22 10:26:00,2026-03-22 10:20:00,AS1378,SEA
+-1,departure,Spokane,Departed,12,,2026-03-22 10:27:00,2026-03-22 10:20:00,AS2338,GEG
+-1,departure,Las Vegas,Departed,,,2026-03-22 10:48:00,2026-03-22 10:48:00,NK1623,LAS
+-1,departure,Chicago/O'Hare,Departed,9,,2026-03-22 10:52:00,2026-03-22 10:44:00,"UA2426, AC4307",ORD
+-1,departure,Dallas-Ft. Worth,Departed,5,,2026-03-22 10:55:00,2026-03-22 10:53:00,AA3197,DFW
+-1,departure,Seattle-Tacoma,Departed,4,,2026-03-22 11:05:00,2026-03-22 11:02:00,DL2101,SEA
+-1,departure,Portland,Departed,11,,2026-03-22 11:09:00,2026-03-22 11:04:00,AS1405,PDX
+-1,departure,Denver,Departed,10,,2026-03-22 11:15:00,2026-03-22 11:07:00,"UA421, AC5027",DEN
+-1,departure,Denver,Departed,15,,2026-03-22 11:32:00,2026-03-22 11:20:00,F94372,DEN
+-1,departure,Chicago/O'Hare,Departed,6,,2026-03-22 11:41:00,2026-03-22 11:37:00,AA2285,ORD
+-1,departure,Santa Rosa,Departed,12,,2026-03-22 11:45:00,2026-03-22 11:36:00,AS3467,STS
+710870,departure,Austin,Departed,18,,2026-03-22 11:45:00,2026-03-22 11:46:00,WN127,AUS
+-1,departure,Atlanta,Departed,3,,2026-03-22 11:56:00,2026-03-22 11:56:00,DL1020,ATL
+-1,departure,Seattle-Tacoma,Departed,13,,2026-03-22 12:07:00,2026-03-22 11:57:00,AS548,SEA
+-1,departure,Las Vegas,Departed,4,,2026-03-22 12:10:00,2026-03-22 12:43:00,DL4078,LAS
+710876,departure,Sacramento,Departed,17,,2026-03-22 12:10:00,2026-03-22 12:10:00,WN4518,SMF
+-1,departure,Vancouver,Departed,14,,2026-03-22 12:25:00,2026-03-22 12:21:00,AC599,YVR
+-1,departure,Phoenix,Departed,6,,2026-03-22 12:26:00,2026-03-22 12:34:00,AA456,PHX
+-1,departure,Houston,Departed,8,,2026-03-22 12:29:00,2026-03-22 12:35:00,UA2451,IAH
+-1,departure,Detroit,Departed,2,,2026-03-22 12:34:00,2026-03-22 12:26:00,DL1669,DTW
+710883,departure,Denver,Departed,19,,2026-03-22 12:45:00,2026-03-22 12:49:00,WN813,DEN
+-1,departure,Dallas-Ft. Worth,Departed,5,,2026-03-22 12:47:00,2026-03-22 14:14:00,AA2264,DFW
+-1,departure,Newark,Departed,9,,2026-03-22 12:48:00,2026-03-22 12:46:00,"UA1559, AC4087",EWR
+710890,departure,Oakland,Departed,18,,2026-03-22 12:50:00,2026-03-22 12:51:00,WN4507,OAK
+-1,departure,New York/JFK,Departed,7,,2026-03-22 13:00:00,2026-03-22 13:06:00,AA3085,JFK
+-1,departure,Boise,Departed,16,,2026-03-22 13:19:00,2026-03-22 13:02:00,G41587,BOI
+710893,departure,Las Vegas,Departed,21,,2026-03-22 13:25:00,2026-03-22 13:26:00,WN3810,LAS
+-1,departure,Denver,Departed,10,,2026-03-22 13:27:00,2026-03-22 13:25:00,"UA1937, AC5278",DEN
+-1,departure,Phoenix,Departed,6,,2026-03-22 13:27:00,2026-03-22 13:31:00,AA457,PHX
+-1,departure,Minneapolis-St. Paul,Departed,4,,2026-03-22 13:29:00,2026-03-22 13:56:00,DL1140,MSP
+-1,departure,Salt Lake City,Departed,3,,2026-03-22 13:43:00,2026-03-22 13:36:00,DL1575,SLC
+710897,departure,Sacramento,Departed,20,,2026-03-22 14:00:00,2026-03-22 14:13:00,WN1036,SMF
+-1,departure,San Francisco,Departed,12,,2026-03-22 14:01:00,2026-03-22 13:54:00,AS3268,SFO
+710899,departure,Phoenix,Departed,18,,2026-03-22 14:05:00,2026-03-22 14:22:00,WN1242,PHX
+-1,departure,Portland,Departed,11,,2026-03-22 14:12:00,2026-03-22 16:44:00,AS712,PDX
+-1,departure,Calgary,Departed,14,,2026-03-22 14:15:00,2026-03-22 14:04:00,WS1581,YYC
+-1,departure,Chicago/O'Hare,Departed,8,,2026-03-22 14:22:00,2026-03-22 14:15:00,"UA1352, AC4596",ORD
+710901,departure,Las Vegas,Departed,21,,2026-03-22 14:30:00,2026-03-22 14:34:00,WN133,LAS
+-1,departure,Provo,Departed,2,,2026-03-22 14:34:00,2026-03-22 14:21:00,MX603,PVU
+-1,departure,Dallas-Ft. Worth,Departed,7,,2026-03-22 14:47:00,2026-03-22 14:39:00,AA2861,DFW
+-1,departure,Las Vegas,Departed,15,,2026-03-22 14:53:00,2026-03-22 15:09:00,NK1631,LAS
+-1,departure,Seattle-Tacoma,Departed,11,,2026-03-22 14:57:00,2026-03-22 14:53:00,AS373,SEA
+-1,departure,Tucson,Departed,12,,2026-03-22 15:11:00,2026-03-22 14:55:00,AS3308,TUS
+710905,departure,Oakland,Departed,19,,2026-03-22 15:15:00,2026-03-22 15:28:00,WN1597,OAK
+-1,departure,Chicago/O'Hare,Departed,6,,2026-03-22 15:24:00,2026-03-22 15:31:00,AA2212,ORD
+-1,departure,Pasco,Departed,16,,2026-03-22 15:24:00,2026-03-22 15:39:00,G43531,PSC
+-1,departure,Houston,Departed,9,,2026-03-22 15:25:00,2026-03-22 15:15:00,UA1950,IAH
+-1,departure,San Francisco,Departed,10,,2026-03-22 15:45:00,2026-03-22 15:40:00,"UA5351, AC4187",SFO
+-1,departure,Provo,Departed,17,,2026-03-22 15:59:00,2026-03-22 15:50:00,G43221,PVU
+710909,departure,Phoenix,Departed,14,,2026-03-22 16:30:00,2026-03-22 16:30:00,WN510,PHX
+-1,departure,Phoenix,Departed,6,,2026-03-22 16:32:00,2026-03-22 17:40:00,AA2094,PHX
+-1,departure,Grand Junction,Departed,2,,2026-03-22 16:35:00,2026-03-22 16:31:00,MX624,GJT
+-1,departure,San Francisco,Departed,12,,2026-03-22 16:39:00,2026-03-22 16:32:00,AS3465,SFO
+-1,departure,Dallas-Ft. Worth,Departed,5,,2026-03-22 16:45:00,2026-03-22 17:19:00,AA2659,DFW
+-1,departure,Salt Lake City,Departed,3,,2026-03-22 17:06:00,2026-03-22 16:59:00,DL1277,SLC
+-1,departure,Seattle-Tacoma,Departed,13,,2026-03-22 17:20:00,2026-03-22 17:13:00,AS630,SEA
+-1,departure,Las Vegas,Departed,4,,2026-03-22 17:31:00,2026-03-22 17:18:00,DL4074,LAS
+-1,departure,Santa Rosa,Departed,12,,2026-03-22 17:34:00,2026-03-22 17:26:00,AS3319,STS
+-1,departure,Phoenix,Departed,15,,2026-03-22 17:42:00,2026-03-22 17:36:00,F94958,PHX
+-1,departure,Portland,Departed,11,,2026-03-22 18:10:00,2026-03-22 18:30:00,AS589,PDX
+-1,departure,Medford,Departed,16,,2026-03-22 18:26:00,2026-03-22 18:24:00,G424,MFR
+-1,departure,Denver,Departed,10,,2026-03-22 18:34:00,2026-03-22 18:31:00,"UA2656, AC5328",DEN
+-1,departure,San Francisco,Departed,8,,2026-03-22 18:35:00,2026-03-22 18:26:00,"UA2496, AC5195",SFO
+-1,departure,San Francisco,Departed,12,,2026-03-22 18:35:00,2026-03-22 18:30:00,AS3494,SFO
+-1,departure,San Francisco,Departed,15,,2026-03-22 18:47:00,2026-03-22 18:38:00,F93581,SFO
+710923,departure,San Jose,Departed,20,,2026-03-22 18:50:00,2026-03-22 18:59:00,WN4449,SJC
+-1,departure,Seattle-Tacoma,Departed,4,,2026-03-22 19:01:00,2026-03-22 18:49:00,DL1430,SEA
+710926,departure,Oakland,Departed,17,,2026-03-22 19:10:00,2026-03-22 19:59:00,WN4510,OAK
+-1,departure,Salt Lake City,Departed,3,,2026-03-22 19:15:00,2026-03-22 19:08:00,DL1574,SLC
+-1,departure,Dallas-Ft. Worth,Departed,7,,2026-03-22 19:18:00,2026-03-22 19:22:00,AA3223,DFW
+-1,departure,Provo,Departed,16,,2026-03-22 19:26:00,2026-03-22 19:17:00,G43233,PVU
+-1,departure,San Francisco,Departed,1A,,2026-03-22 19:37:00,2026-03-22 19:29:00,"UA5339, AC4247",SFO
+-1,departure,Provo,Departed,2,,2026-03-22 19:43:00,2026-03-22 19:23:00,MX605,PVU
+710937,departure,Denver,Departed,18,,2026-03-22 19:45:00,2026-03-22 20:05:00,WN4504,DEN
+-1,departure,Phoenix,Departed,5,,2026-03-22 19:48:00,2026-03-22 19:49:00,AA2088,PHX
+-1,departure,Las Vegas,Departed,15,,2026-03-22 19:53:00,2026-03-22 19:45:00,F91700,LAS
+-1,departure,Everett,Departed,13,,2026-03-22 19:59:00,2026-03-22 19:50:00,AS2116,PAE
+710939,departure,Sacramento,Departed,20,,2026-03-22 20:05:00,2026-03-22 20:10:00,WN1715,SMF
+-1,departure,San Francisco,Departed,12,,2026-03-22 20:08:00,2026-03-22 20:00:00,AS3492,SFO
+-1,departure,Seattle-Tacoma,Departed,11,,2026-03-22 20:34:00,2026-03-22 20:35:00,AS1310,SEA
+710944,departure,Phoenix,Departed,21,,2026-03-22 20:45:00,2026-03-22 21:07:00,WN4512,PHX
+710945,departure,Oakland,Departed,20,,2026-03-22 21:00:00,2026-03-22 21:38:00,WN1409,OAK
+710946,departure,San Jose,Departed,17,,2026-03-22 21:00:00,2026-03-22 21:33:00,WN2805,SJC
+710955,departure,Sacramento,Departed,18,,2026-03-22 21:05:00,2026-03-22 21:27:00,WN4524,SMF
+710956,departure,Las Vegas,Departed,19,,2026-03-22 21:10:00,2026-03-22 21:06:00,WN700,LAS
+-1,departure,Newark,Departed,9,,2026-03-22 21:14:00,2026-03-22 21:42:00,"UA2186, AC3098",EWR
+-1,departure,Atlanta,Departed,3,,2026-03-22 21:20:00,2026-03-22 21:12:00,DL826,ATL
+-1,departure,Phoenix-Mesa,Departed,16,,2026-03-22 21:44:00,2026-03-22 22:24:00,G43533,AZA
