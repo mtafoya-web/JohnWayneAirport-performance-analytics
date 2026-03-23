@@ -923,3 +923,7 @@ Top 10 delayed flights:
 2026-03-20 21:38:42,295 [INFO] Scheduler started
 2026-03-20 21:38:42,296 [INFO] Added job "run_pipeline" to job store "default"
 2026-03-20 21:38:42,296 [INFO] Scheduler started
+2026-03-22 21:34:59,215 [INFO] Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-03-22 21:34:59,216 [INFO] Scheduler started
+2026-03-22 21:34:59,217 [INFO] Added job "run_pipeline" to job store "default"
+2026-03-22 21:34:59,217 [INFO] Scheduler started
