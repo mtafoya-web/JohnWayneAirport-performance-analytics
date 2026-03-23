@@ -141,25 +141,31 @@ requirements
 ## How to Run the Pipeline
 
 1. Clone the repository
-
+```
 git clone https://github.com/mtafoya-web/JohnWayneAirport-performance-analytics.git
 cd JohnWayneAirport-performance-analytics
-
+```
 2. Create a virtual environment
-
+```
 python -m venv .venv
+```
 
 Activate the environment
 
 Windows:
+```
 .venv\Scripts\activate
+```
 
 Mac or Linux:
+```
 source .venv/bin/activate
+```
 
 3. Install dependencies
-
+```
 pip install -r requirements.txt
+```
 
 4. Run the pipeline
 
