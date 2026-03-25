@@ -179,7 +179,8 @@ This will scrape the latest flight data, save the raw dataset, clean and transfo
 
 ## Dashboard
 
-The processed dataset is used to build a Power BI dashboard showing delay trends, flight volume, route distribution, and airline performance.
+The processed dataset is used to build a Power BI dashboard showing delay trends, flight volume, cancellation rate, and airline performance.
+<img width="2388" height="1338" alt="image" src="https://github.com/user-attachments/assets/a8ae0c58-c390-48ea-bbc4-164e6f73b77c" />
 
 --------------------------------------------------
 
